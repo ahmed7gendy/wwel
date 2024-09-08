@@ -1,0 +1,71 @@
+/* src/components/Navbar.css */
+.navbar {
+  background-color: #094D50; /* اللون الأساسي للـ Navbar */
+  padding: 7px 7px; /* المسافة حول محتوى الـ Navbar */
+  position: fixed; /* لتثبيت الـ Navbar في أعلى الصفحة */
+  top: 0; /* وضعه في أعلى الصفحة */
+  width: calc(100% - 300px); /* عرض Navbar بدون التأثير على Sidebar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* ظل خفيف للـ Navbar */
+  box-sizing: border-box; /* يشمل الـ padding و border ضمن العرض الكلي */
+  display: flex; /* لعرض العناصر بشكل أفقي */
+  align-items: center; /* لتوسيط العناصر عموديًا */
+  justify-content: space-between; /* لتوزيع المحتوى بشكل متساوي */
+  z-index: 1000; /* لضمان ظهور شريط التنقل فوق العناصر الأخرى */
+  height: 60px; /* تحديد ارتفاع الـ Navbar */
+  overflow: hidden; /* منع التمرير الخارجي */
+}
+
+/* تصميم الشعار في الـ Navbar */
+.navbar-logo {
+  display: flex; /* لعرض الشعار بشكل أفقي */
+  align-items: center; /* لتوسيط الشعار عموديًا */
+}
+
+/* تصميم الشعار إذا كان يحتوي على صورة أو رمز */
+.navbar-logo svg {
+  height: 40px; /* تعديل حجم الشعار حسب الحاجة */
+}
+button:hover {
+  background-color: #0b5e5e91;
+}
+/* تصميم أيقونة القائمة الجانبية */
+.navbar-menu-icon {
+  position: absolute; /* تثبيت الزر في موضع معين */
+  top: 50%; /* وضعه في منتصف الارتفاع */
+  left: 0; /* التصاق الزر بطرف الشاشة من الجهة اليسرى */
+  transform: translateY(-50%); /* توسيط الزر عموديًا */
+  display: flex;
+  flex-direction: column;
+  padding: 0; /* إزالة الحشو */
+  cursor: pointer; /* تغيير مؤشر الفأرة عند التمرير فوق الزر */
+  transition: all 0.3s ease; /* تأثير التحويل عند التمرير */
+}
+
+/* تأثير hover لزر القائمة الجانبية */
+.navbar-menu-icon:hover {
+  background-color: rgba(184, 171, 171, 0.651); /* تغيير لون الخلفية عند hover */
+  border-radius: 4px; /* إضافة حواف دائرية بسيطة */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* إضافة ظل عند hover */
+}
+
+/* تصميم خطوط أيقونة القائمة الجانبية */
+.navbar-menu-icon-line {
+  width: 25px;
+  height: 3px;
+  background-color: #050505; /* لون الخطوط */
+  margin: 3px 0;
+  transition: all 0.3s ease; /* تأثير التحويل */
+}
+
+/* تغيير شكل الأيقونة عند فتح القائمة */
+.navbar-menu-icon.open .navbar-menu-icon-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 10px); /* تحويل الخط الأول */
+}
+
+.navbar-menu-icon.open .navbar-menu-icon-line:nth-child(2) {
+  opacity: 0; /* إخفاء الخط الأوسط */
+}
+
+.navbar-menu-icon.open .navbar-menu-icon-line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -10px); /* تحويل الخط الثالث */
+}

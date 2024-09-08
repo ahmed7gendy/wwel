@@ -1,0 +1,189 @@
+/* أساسيات */
+.course-management-page {
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.course-management-header {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.course-management-header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+/* التصميم الأساسي */
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.courses-section,
+.users-section,
+.details-section {
+  width: 32%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* تصميم قائمة الكورسات */
+.course-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.course-list li {
+  border-radius: 28px;
+  margin: auto;
+  background-color: #333333a6;
+  padding: 30px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+}
+
+.course-list li.selected {
+  background-color: #f0f8ff;
+  font-weight: bold;
+}
+
+/* تصميم قائمة المستخدمين */
+.user-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+}
+
+/* تصميم التفاصيل */
+.course-details {
+  margin-top: 20px;
+}
+
+.enrolled-users-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.enrolled-users-list li {
+  padding: 5px 0;
+}
+
+/* أزرار إدارة المستخدمين */
+.user-actions {
+  margin-top: 20px;
+}
+
+.user-actions button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.user-actions button:hover {
+  background-color: #0056b3;
+}
+
+/* تصميم الـ checkbox ليكون دائري */
+.user-list input[type="checkbox"],
+.enrolled-users-list input[type="checkbox"] {
+  appearance: none; /* إزالة التنسيق الافتراضي */
+  -webkit-appearance: none; /* إزالة التنسيق الافتراضي على متصفحات Webkit */
+  background-color: #fff;
+  border: 2px solid #007bff; /* لون الحدود */
+  border-radius: 50%; /* جعلها دائرية */
+  width: 20px; /* عرض الـ checkbox */
+  height: 20px; /* ارتفاع الـ checkbox */
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+/* تصميم الـ checkbox عند التحديد */
+.user-list input[type="checkbox"]:checked,
+.enrolled-users-list input[type="checkbox"]:checked {
+  background-color: #007bff; /* لون الخلفية عند التحديد */
+  border-color: #007bff; /* لون الحدود عند التحديد */
+}
+
+/* إضافة علامة التحديد داخل الـ checkbox */
+.user-list input[type="checkbox"]::after,
+.enrolled-users-list input[type="checkbox"]::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px; /* عرض العلامة */
+  height: 10px; /* ارتفاع العلامة */
+  background: #fff; /* لون العلامة */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* جعل العلامة مرئية عند التحديد */
+.user-list input[type="checkbox"]:checked::after,
+.enrolled-users-list input[type="checkbox"]:checked::after {
+  opacity: 1;
+}
+
+/* تحسين تصميم قائمة المستخدمين */
+.user-list input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* تحسين تصميم قائمة المستخدمين المسجلين */
+.enrolled-users-list input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* تصميم شريط البحث */
+.search-bar {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-bar input[type="text"]::placeholder {
+  color: #888;
+}
+
+.search-bar input[type="text"]:focus {
+  border: 2px solid #007bff;
+}
