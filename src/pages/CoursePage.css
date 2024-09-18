@@ -1,0 +1,115 @@
+/* CoursePage.css */
+
+.course-page {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.course-selection,
+.sub-course-selection,
+.questions-section,
+.media-upload,
+.media-display {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+select,
+input[type="text"],
+input[type="file"] {
+  padding: 8px;
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px 0;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.question {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.question h3 {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+
+.answer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.answer input[type="text"] {
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  flex: 1;
+}
+
+.answer input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.media-upload {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.media-display {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.media-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.image-gallery img {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.video-gallery video {
+  max-width: 200px;
+  border-radius: 4px;
+}
+
+.pdf-gallery iframe {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}

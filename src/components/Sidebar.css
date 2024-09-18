@@ -1,0 +1,109 @@
+/* src/components/Sidebar.css */
+.sidebar {
+  border-radius: 28px;
+  position: fixed;
+  top: 60px; /* Sidebar starts just below Navbar */
+  left: 0;
+  width: 80px; /* عرض الشريط الجانبي */
+  height: calc(100% - 60px); /* يملأ الارتفاع المتبقي */
+  background-color: #ffffff; /* لون خلفية */
+  color: #094D50; /* لون النص */
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2); /* ظل أقوى */
+  z-index: 1000; /* لضمان الرؤية فوق المحتوى الآخر */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* توسيط العناصر أفقياً */
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar.closed {
+  transform: translateX(-100%);
+}
+
+.sidebar h2 {
+  display: none; /* إخفاء عنوان الشريط الجانبي */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%; /* تعيين العرض الكامل لتناسب العناصر */
+}
+
+.sidebar ul li {
+  border-radius: 28px;
+
+  padding: 15px 0; /* حشو أعلى وأسفل */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* توسيط العناصر أفقياً */
+  position: relative; /* لتحديد موضع العناصر داخل */
+}
+
+.sidebar ul li:hover {
+  border-radius: 28px;
+  background-color: rgba(66, 68, 70, 0.534); /* لون خلفية عند التمرير */
+  transform: scale(1.05); /* تأثير تكبير طفيف عند التمرير */
+}
+
+.sidebar ul li a {
+  color: #000000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%; /* يضمن أن يكون نطاق النقر ممتدًا على العرض الكامل */
+  padding: 10px; /* إضافة حشو حول الأيقونات والنص */
+  justify-content: center; /* توسيط العناصر أفقياً */
+  box-sizing: border-box; /* لضمان احتساب الحجم بشكل صحيح */
+}
+
+.sidebar ul li a .sidebar-icon {
+  
+  width: 26px; /* تعيين عرض الأيقونات */
+  height: 26px; /* تعيين ارتفاع الأيقونات */
+  fill: #000000; /* لون الأيقونات */
+  transition: fill 0.3s ease;
+}
+
+
+
+.sidebar .logout-button {
+  position: absolute;
+  bottom: 20px;
+  width: calc(100% - 20px); /* عرض الزر، يترك مساحة جانبية صغيرة */
+  text-align: center;
+  padding: 10px;
+  background-color: #ce1100; /* لون خلفية الزر */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem; /* حجم الخط */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* توسيط العناصر أفقياً */
+}
+
+.sidebar .logout-button .sidebar-icon {
+  width: 26px; /* تعيين عرض الأيقونات */
+  height: 26px; /* تعيين ارتفاع الأيقونات */
+  margin-right:7px; /* المسافة بين الأيقونة والنص */
+  fill: #ffffff; /* لون الأيقونات */
+}
+
+.sidebar .logout-button:hover {
+  background-color: #e64a19; /* لون خلفية الزر عند التمرير */
+  transform: scale(1.05); /* تأثير تكبير طفيف عند التمرير */
+}
+
+.sidebar .logout-button:focus {
+  outline: none; /* إزالة الحدود عند التركيز */
+  background-color: #d84315; /* لون الخلفية عند التركيز */
+}
